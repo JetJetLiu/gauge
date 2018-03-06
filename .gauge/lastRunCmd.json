@@ -1,0 +1,8 @@
+{
+	"Command": [
+		"gauge",
+		"run",
+		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSeleniumWrapperMethod",
+		"F:\\git\\gaugeTest\\MyGaugeJavaMavenSeleniumWrapperMethod\\specs\\testWrapper.spec"
+	]
+}
