@@ -27,6 +27,7 @@ public class StepImplementation {
   public void implementation1() {
       String app_url = System.getenv("APP_URL");
       Driver.webDriver.get(app_url + "/");
-      assertTrue(Driver.webDriver.getTitle().contains("AAGaugeAA"));
+      assertTrue(Driver.webDriver.getTitle().contains("Gauge"));
+
   }
 }

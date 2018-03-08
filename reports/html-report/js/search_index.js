@@ -1,1 +1,1 @@
-var index = {"Tags":{},"Specs":{"Specification Heading":["specs\\testWrapper.html"]}};
+var index = {"Tags":{"baidu":["specs\\openBaidu.html"]},"Specs":{"":["specs\\eg.html","specs\\example.html","specs\\mysql.html","specs\\mysqlWrapper.html"],"Specification Heading":["specs\\openBaidu.html"]}};

@@ -2,7 +2,9 @@
 	"Command": [
 		"gauge",
 		"run",
-		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSeleniumWrapperMethod",
-		"F:\\git\\gaugeTest\\MyGaugeJavaMavenSeleniumWrapperMethod\\specs\\testWrapper.spec"
+		"--tags",
+		"single word",
+		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium",
+		"F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium\\specs"
 	]
 }

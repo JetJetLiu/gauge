@@ -7,28 +7,31 @@ import java.sql.*;
 import static org.junit.Assert.assertTrue;
 
 public class StepMysql {
-    private Connection connection;
-    private PreparedStatement statement;
+    private Connection connection = null;
+    private PreparedStatement statement = null;
 
     @Step("open connection before crud")
     public void openConnection() throws SQLException {
-        try {
-//            Mysql 5版本
-            String driver = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/test?useSSL=false";
-//            Mysql 6版本，采用如下驱动
-//            String driverClassName=com.mysql.cj.jdbc.Driver
-//            String url = "jdbc:mysql://localhost:3306/test?serverTimezone=UTC";
-            String username = "root";
-            String password = "";
 
+        String driver="com.mysql.cj.jdbc.Driver";
+        String url="jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+        String username = "root";
+        String password = "";
+
+        try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, username, password);
+            if( connection != null || !connection.isClosed()){
+                System.out.println("Database connected success！");
+            }
+        } catch (ClassNotFoundException e) {
+            System.out.println("驱动加载失败！");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("SQL语句执行失败！");
+            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            //关链接,释放资源
-            connection.close();
         }
     }
 
@@ -45,14 +48,16 @@ public class StepMysql {
             statement.setString(1, name);
             statement.setString(2, sex);
             statement.setInt(3, age);
-
             int result = statement.executeUpdate();
-
             assertTrue(result > 0);
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }statement.close();
+        }
+        finally {
+            statement.close();
+            connection.close();
+        }
     }
 
 
@@ -70,18 +75,21 @@ public class StepMysql {
                 userInfo.append("\t\tSchool:" + resultSet.getString("school"));
                 userInfo.append("\t\tMajor:" + resultSet.getString("major"));
                 userInfo.append("\t\tAddress:" + resultSet.getString("address"));
+                // writeMessag()方法可以将信息写入日志和测试报告中
                 Gauge.writeMessage(userInfo.toString());
             }
 
             resultSet.last();
             int rowCount = resultSet.getRow();
             resultSet.close();
-
+            // 若断言失败，则错误日志会写入测试报告中（assert正确时，则不会写入报告）
             assertTrue(rowCount > 0);
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        }
+        finally {
             statement.close();
+            connection.close();
         }
     }
 
@@ -95,8 +103,10 @@ public class StepMysql {
             assertTrue(resultNum > 0);
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        }
+        finally {
             statement.close();
+            connection.close();
         }
     }
 
@@ -111,6 +121,7 @@ public class StepMysql {
             e.printStackTrace();
         }finally {
             statement.close();
+            connection.close();
         }
     }
 

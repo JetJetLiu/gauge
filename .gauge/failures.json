@@ -1,7 +1,7 @@
 {
 	"Args": [
 		"run",
-		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSeleniumWrapperMethod"
+		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium"
 	],
 	"FailedItems": []
 }
