@@ -1,1 +1,1 @@
-var index = {"Tags":{"baidu":["specs\\openBaidu.html"]},"Specs":{"":["specs\\eg.html","specs\\example.html","specs\\mysql.html","specs\\mysqlWrapper.html"],"Specification Heading":["specs\\openBaidu.html"]}};
+var index = {"Tags":{"single word":["specs\\eg.html"]},"Specs":{"":["specs\\openBaidu.html","specs\\example.html","specs\\mysql.html","specs\\mysqlWrapper.html"],"aeiou":["specs\\eg.html"]}};

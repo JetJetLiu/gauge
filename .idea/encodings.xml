@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/StepImplementation.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/test/java/StepMysql.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/test/java/Test.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/test/java/base/DriverUtil.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/test/java/base/MainPage.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/test/java/base/StepOpenBaidu.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

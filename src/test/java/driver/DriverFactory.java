@@ -5,9 +5,10 @@ import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 
 public class DriverFactory {
 
@@ -29,14 +30,16 @@ public class DriverFactory {
             case "CHROME":
             default:
 	            ChromeDriverManager.getInstance().setup();
-	
+
 	            ChromeOptions options = new ChromeOptions();
 	            if ("Y".equalsIgnoreCase(System.getenv("HEADLESS"))) {
 	                options.addArguments("--headless");
 	                options.addArguments("--disable-gpu");
 	            }
-	
+
 	            return new ChromeDriver(options);
         }
+
     }
+
 }

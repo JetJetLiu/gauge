@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="4,1,0" data-total="5">
+        <svg id="pie-chart" data-results="5,0,0" data-total="5">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 4/5</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 5/5</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 1/5</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 0/5</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/5</title></path>
         </svg>
@@ -43,8 +43,8 @@
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">4</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">1</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">5</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>20%</span>
+          <span>0%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:17</span>
+          <span>00:00:02</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Mar 8, 2018 at 12:41pm</span>
+          <span>Mar 9, 2018 at 12:11pm</span>
         </li>
       </ul>
       
@@ -92,11 +92,20 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="eg.html">
+          <a href="openBaidu.html">
             
               <li class='failed spec-name'>
             
               <span id="scenarioName" class="scenarioname"></span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="eg.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">aeiou</span>
               <span id="time" class="time">00:00:00</span>
             </li>
           </a>
@@ -128,15 +137,6 @@
             </li>
           </a>
           
-          <a href="openBaidu.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Specification Heading</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
         </ul>
       </div>
     </aside>
@@ -148,11 +148,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="F:\git\gaugeTest\MyGaugeJavaMavenSelenium\specs\openBaidu.spec">Specification Heading</h3>
+        <h3 class="spec-head" title="F:\git\gaugeTest\MyGaugeJavaMavenSelenium\specs\openBaidu.spec"></h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -165,7 +165,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:07</span>
+        <span class="time">00:00:00</span>
       </div>
 
 	
@@ -174,126 +174,22 @@
 	</header>
 	<div id="specItemsContainer">
 	
-    
-  
-
-    
-
-    <div class="content">
-    
-  
-  <span><p>Created by Jet on 2018/3/5</p>
-</span>
-  
-  <span></span>
-  
-  <span><p>This is an executable specification file which follows markdown syntax.</p>
-</span>
-  
-  <span><p>Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
-</span>
-  
-  <span></span>
-  
-  
-
-  
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Open baidu.com</h3>
-    <span class="time">00:00:07</span>
-
-	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> baidu</span>
-      
+		
+  <div class="error-container failed">
+    <div class="error-heading">Errors:</div>
+    <div class="exception-container">
+      <div class="exception">
+        <pre class="error">
+          
+            [Parse Error] F:\git\gaugeTest\MyGaugeJavaMavenSelenium\specs\openBaidu.spec:1 Spec heading not found => ''
+          
+        </pre>
+      </div>
     </div>
-  
-
-	</div>
-  
-  
-
-	
-
-  
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:07</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        visit baidu website
-      </span>
-    
-  
   </div>
 
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  
-
-  
-  
-
+		</div>
 	
-	</div>
-
-      
-
-    </div>
-    </div>
-
-    
-  
-
-    
-    </div>
-  
 
 		</div>
 	

@@ -2,8 +2,6 @@
 	"Command": [
 		"gauge",
 		"run",
-		"--tags",
-		"single word",
 		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium",
 		"F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium\\specs"
 	]

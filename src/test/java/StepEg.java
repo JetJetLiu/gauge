@@ -1,12 +1,15 @@
+import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
+import driver.Driver;
 
 import java.util.HashSet;
 
 import static org.junit.Assert.assertEquals;
 
 public class StepEg {
+    Driver driver = new Driver();
 
     private HashSet<Character> vowels;
 
@@ -21,7 +24,7 @@ public class StepEg {
     @Step("The word <word> has <expectedCount> vowels.")
     public void verifyVowelsCountInWord(String word, int expectedCount) {
         int actualCount = countVowels(word);
-        assertEquals(expectedCount, actualCount);
+        driver.assertEqualWrapperByJunit(expectedCount, actualCount);
     }
 
     @Step("Almost all words have vowels <wordsTable>")
@@ -30,8 +33,14 @@ public class StepEg {
             String word = row.getCell("Word");
             int expectedCount = Integer.parseInt(row.getCell("Vowel Count"));
             int actualCount = countVowels(word);
+            try {
+                assertEquals(expectedCount, 3);
+            }catch (Exception e){
+                Gauge.writeMessage("Wrong!");
+            }
 
-            assertEquals(expectedCount, actualCount);
+//            assertEquals(expectedCount, 3);
+//            driver.assertEqualWrapperByJunit(expectedCount,1);
         }
     }
 

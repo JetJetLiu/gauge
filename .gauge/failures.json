@@ -3,5 +3,7 @@
 		"run",
 		"--dir=F:\\git\\gaugeTest\\MyGaugeJavaMavenSelenium"
 	],
-	"FailedItems": []
+	"FailedItems": [
+		"specs\\eg.spec:21"
+	]
 }
